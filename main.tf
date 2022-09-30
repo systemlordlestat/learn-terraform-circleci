@@ -44,3 +44,13 @@ resource "aws_s3_bucket_website_configuration" "terramino" {
     key = "error.html"
   }
 }
+
+terraform {
+  cloud {
+    organization = "Spartaroosevelt-test"
+
+    workspaces {
+      name = "learn-terraform-circleci"
+    }
+  }
+}
